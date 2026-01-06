@@ -39,7 +39,7 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@backend/*": ["./src/*"],
+      "@/*": ["./src/*"],
       "@shared/*": ["../shared/src/*"]
     }
   }
