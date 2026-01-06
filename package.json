@@ -1,0 +1,37 @@
+{
+  "name": "MockPay",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:front": "cd ./frontend && npm run dev",
+    "dev:back": "cd ./backend && npm run dev",
+    "dev": "concurrently \"npm run dev:front\" \"npm run dev:back\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
+    "lint:frontend": "eslint frontend --ext .ts,.tsx",
+    "lint:backend": "eslint backend --ext .ts,.js",
+    "lint:shared": "eslint shared --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.25",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.2.7",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.49.0"
+  }
+}
