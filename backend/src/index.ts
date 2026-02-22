@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import paymentRoutes from '@/routes/payment.route.js'
+import webhookRoutes from '@/routes/webhook.route.js'
 import mongoose from 'mongoose'
 import { errorMiddleware } from '@/middlewares/error.middleware.js'
 
@@ -9,7 +10,8 @@ dotenv.config()
 const app = express()
 
 app.use(express.json())
-app.use('/payments', paymentRoutes)
+app.use('/payment', paymentRoutes)
+app.use('/webhook', webhookRoutes)
 app.use(errorMiddleware)
 
 const PORT = process.env.PORT || 3000
